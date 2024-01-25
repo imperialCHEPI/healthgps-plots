@@ -1,11 +1,5 @@
-setwd("C:/Users/jzhu5/OneDrive - Imperial College London/Project/RSTL_India/Visualization") 
-setwd("/Users/jasmine/OneDrive - Imperial College London/Project/RSTL_India/Visualization")
-
-install.packages("readr")
 library(readr)
-install.packages("ggplot2")
 library(ggplot2)
-install.packages("collapse")
 library(collapse)
 
 # Import data ----
