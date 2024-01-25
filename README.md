@@ -17,25 +17,20 @@ cd healthgps-plots
 
 ### Setting Up the Project Environment with renv
 
-1. Open a terminal and navigate to the project directory:
-```bash
-cd path/to/your-project
-```
-
-2. Activate the renv environment:
+1. Activate the renv environment:
 ```bash
 Rscript -e 'renv::activate()'
 ```
 
-3. Install project dependencies:
+2. Install project dependencies:
 ```bash
 Rscript -e 'renv::restore()'
 ```
 
 ### Running the Script
-You can now run your R script using:
+You can now run the visualisation script using:
 ```bash
-Rscript your_script.R
+Rscript Visualisation.R path/to/HealthGPS_Result_S1.csv path/to/HealthGPS_Result_S2.csv path/to/HealthGPS_Result_S4.csv path/to/HealthGPS_Result_S5.csv
 ```
 
 ### Updating Dependencies
