@@ -2,11 +2,23 @@ library(readr)
 library(ggplot2)
 library(collapse)
 
-# Import data ----
-datas1 <- read.csv("HealthGPS_Result_S1.csv")
-datas2 <- read.csv("HealthGPS_Result_S2.csv")
-datas4 <- read.csv("HealthGPS_Result_S4.csv")
-datas5 <- read.csv("HealthGPS_Result_S5.csv")
+# Check if command-line arguments are provided
+if (length(commandArgs(trailingOnly = TRUE)) < 4) {
+  stop("Usage: Rscript script.R <path1> <path2> <path3> <path4>")
+}
+
+
+# Get file paths from command-line arguments
+path1 <- commandArgs(trailingOnly = TRUE)[1]
+path2 <- commandArgs(trailingOnly = TRUE)[2]
+path3 <- commandArgs(trailingOnly = TRUE)[3]
+path4 <- commandArgs(trailingOnly = TRUE)[4]
+
+# Read data from CSV files
+datas1 <- read.csv(path1)
+datas2 <- read.csv(path2)
+datas4 <- read.csv(path3)
+datas5 <- read.csv(path4)
 
 # Summarize ----
 ## Policy S1 ----
