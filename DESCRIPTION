@@ -1,0 +1,19 @@
+Type: Package
+Package: healthgps-plots
+Title: Visualisation functions for Health-GPS
+Author: Ryan Smith
+Maintainer: Ryan Smith <ryan.smith@imperial.ac.uk>
+Description: A collection of functions for visualising data from the
+    Health-GPS project.
+License: BSD 3-clause License
+Depends: 
+    R (>= 4.3.2)
+Imports: 
+    collapse,
+    ggplot2,
+    readr
+Suggests: 
+    docopt,
+    styler,
+    usethis
+Encoding: UTF-8

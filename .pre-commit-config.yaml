@@ -1,11 +1,61 @@
 repos:
--   repo: https://github.com/lorenzwalthert/pre-commit-hooks
-    rev: v0.0.0.9016
+-   repo: https://github.com/lorenzwalthert/precommit
+    rev: v0.4.0
     hooks: 
     -   id: style-files
+        args: [--style_pkg=styler, --style_fun=tidyverse_style, --cache-root=styler-perm]
+    -   id: roxygenize
+        additional_dependencies:
+        -    cli
+        -    fs
+        -    here
+        -    magrittr
+        -    purrr
+        -    R.cache
+        -    rlang
+        -    rprojroot
+        -    rstudioapi
+        -    withr
+        -    yaml
+        -    r-lib/pkgapi
+    -   id: use-tidy-description
+    -   id: spell-check
+        exclude: >
+          (?x)^(
+          .*\.[rR]|
+          .*\.feather|
+          .*\.jpeg|
+          .*\.pdf|
+          .*\.png|
+          .*\.py|
+          .*\.RData|
+          .*\.rds|
+          .*\.Rds|
+          .*\.Rproj|
+          .*\.sh|
+          (.*/|)\.gitignore|
+          (.*/|)\.pre-commit-.*|
+          (.*/|)\.Rbuildignore|
+          (.*/|)\.Renviron|
+          (.*/|)\.Rprofile|
+          (.*/|)\.travis\.yml|
+          (.*/|)appveyor\.yml|
+          (.*/|)NAMESPACE|
+          (.*/|)renv/settings\.dcf|
+          (.*/|)renv\.lock|
+          (.*/|)WORDLIST|
+          \.github/workflows/.*|
+          data/.*|
+          inst/hooks/.*|
+          inst/pre-commit-.*|
+          inst/usethis-legacy-hook|
+          LICENSE|
+          renv/.*|
+          revdep/.*|
+          tests/testthat/in/.*|
+          )$
+        args: [--lang=en-GB]
     -   id: parsable-R
     -   id: no-browser-statement
-    -   id: readme-rmd-rendered
-    -   id: roxygenize
-    -   id: use-tidy-description
-    -   id: lintr
+    -   id: no-debug-statement
+    -   id: deps-in-desc
