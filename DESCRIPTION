@@ -9,9 +9,17 @@ License: BSD 3-clause License
 Depends: 
     R (>= 4.3.2)
 Imports: 
+    boot,
     collapse,
+    dplyr,
     ggplot2,
-    readr
+    ggpubr,
+    grid,
+    gridExtra,
+    readr,
+    roxygen2,
+    scales,
+    tidyr
 Suggests: 
     docopt,
     styler,
